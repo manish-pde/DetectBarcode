@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DetectBarcode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBV-us-SWS" userLabel="SelectImageButton">
+                                <rect key="frame" x="20" y="79" width="353" height="250"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="photo" catalog="system"/>
+                                <connections>
+                                    <action selector="onTapSelectImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZW-oO-bFE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-X2-WlL">
+                                <rect key="frame" x="20" y="79" width="353" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="7Gn-Qs-3SL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh8-mq-DZl">
+                                <rect key="frame" x="20" y="344" width="353" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U2X-X2-WlL" secondAttribute="trailing" constant="20" id="1VF-5E-pwj"/>
+                            <constraint firstItem="yh8-mq-DZl" firstAttribute="trailing" secondItem="U2X-X2-WlL" secondAttribute="trailing" id="59J-jv-m1z"/>
+                            <constraint firstItem="yh8-mq-DZl" firstAttribute="leading" secondItem="U2X-X2-WlL" secondAttribute="leading" id="KIv-ya-XT8"/>
+                            <constraint firstItem="aBV-us-SWS" firstAttribute="leading" secondItem="U2X-X2-WlL" secondAttribute="leading" id="Kw1-Qc-tFh"/>
+                            <constraint firstItem="yh8-mq-DZl" firstAttribute="top" secondItem="U2X-X2-WlL" secondAttribute="bottom" constant="15" id="Uez-YH-ymZ"/>
+                            <constraint firstItem="U2X-X2-WlL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="btx-2y-gQe"/>
+                            <constraint firstItem="aBV-us-SWS" firstAttribute="trailing" secondItem="U2X-X2-WlL" secondAttribute="trailing" id="ltY-SN-YR0"/>
+                            <constraint firstItem="U2X-X2-WlL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="maS-lf-zZo"/>
+                            <constraint firstItem="aBV-us-SWS" firstAttribute="bottom" secondItem="U2X-X2-WlL" secondAttribute="bottom" id="mgm-Uc-D6E"/>
+                            <constraint firstItem="aBV-us-SWS" firstAttribute="top" secondItem="U2X-X2-WlL" secondAttribute="top" id="uAy-Jy-K8B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputImage" destination="U2X-X2-WlL" id="boX-mY-JZJ"/>
+                        <outlet property="resultLabel" destination="yh8-mq-DZl" id="xHv-4e-zIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
